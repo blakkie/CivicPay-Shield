@@ -35,6 +35,12 @@ const apiFetch = async (path, options = {}) => {
     ...(options.headers || {}),
   };
 
+  import CivicPayShield from './CivicPayShield'
+
+export default function App() {
+  return <CivicPayShield />
+}
+  
   const res = await fetch(`${API_BASE}${path}`, {
     ...options,
     credentials: "include",
